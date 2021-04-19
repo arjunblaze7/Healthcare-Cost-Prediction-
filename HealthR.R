@@ -1,3 +1,4 @@
+#Setting up environment
 library(ggplot2)
 library(ggthemes)
 library(dplyr)
@@ -6,10 +7,11 @@ library(randomForest)
 library(Hmisc)
 library(cowplot)
 
-
+#Importing data
 Data <- read.csv('C:/Users/Arjun/Desktop/Healthcare/insurance.csv',stringsAsFactors = F)
 str(Data)
 
+#Correlations Scatter plot
 a <- ggplot(Data, aes(age, charges)) +
   geom_jitter(color = "blue", alpha = 0.5) +
   theme_light()
